@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="city" (input)="search()" placeholder="City">
+<input type="text" [(ngModel)]="area" (input)="search()" placeholder="Area">
+<input type="text" [(ngModel)]="hotelName" (input)="search()" placeholder="Hotel Name">
+
+<ul>
+    <li *ngFor="let hotel of searchResults">
+      <h3>{{ hotel.name }}</h3>
+      <p>City: {{ hotel.city }}</p>
+      <p>Area: {{ hotel.area }}</p>
+    </li>
+  </ul>
