@@ -1,0 +1,80 @@
+.container {
+    max-width: 20em;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    /* width: 10%; */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5756e6; /* Border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s; /* Smooth transition */
+  }
+  
+  .input-container input:focus {
+    border-color: #f7bf88; /* Border color on focus */
+  }
+  
+  /* Styling for hotel list */
+  .container div {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .container div h3 {
+    margin: 0;
+  }
+  
+  .container div p {
+    margin: 5px 0;
+    color: #777;
+  }
+
+  .btn-book {
+    padding: 8px 16px;
+    background-color: #5756e6; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .btn-book:hover {
+    background-color: #8f9cd4; /* Button background color on hover */
+  }
+  
+
+  .booking-form {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border-color: #f7bf88;
+  }
+  
+  .booking-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .booking-form button {
+    padding: 8px 16px;
+    background-color: #f7bf88;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

@@ -1,0 +1,8 @@
+{
+    "hotels": [
+      { "id": 1, "name": "Hotel A", "city": "City 1", "area": "Area A", "price": "$100" },
+      { "id": 2, "name": "Hotel B", "city": "City 2", "area": "Area B", "price": "$120" },
+      { "id": 3, "name": "Hotel C", "city": "City 3", "area": "Area C", "price": "$150" }
+    ]
+  }
+  

@@ -1,0 +1,42 @@
+<!-- <form (ngSubmit)="search()">
+  <input type="text" [(ngModel)]="city" name="city" placeholder="City">
+  <input type="text" [(ngModel)]="area" name="area" placeholder="Area">
+  <input type="text" [(ngModel)]="hotelName" name="hotelName" placeholder="Hotel Name">
+  <button type="submit">Search</button>
+</form>
+
+<ul *ngIf="searchResults.length">
+  <li *ngFor="let hotel of searchResults">
+    <h3>{{ hotel.name }}</h3>
+    <p>City: {{ hotel.city }}</p>
+    <p>Area: {{ hotel.area }}</p>
+  </li>
+</ul> -->
+
+
+<!-- search.component.html -->
+<!-- <link href="search.component.css"> -->
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="input-container">
+    <label>Search: <input type="text" [(ngModel)]="searchText" (input)="search()"></label>
+  </div>
+
+  <div *ngFor="let hotel of filteredHotels">
+    <h3>{{ hotel.name }}</h3>
+    <p>City: {{ hotel.city }}</p>
+    <p>Area: {{ hotel.area }}</p>
+    <button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button>
+      <p class="price">{{ hotel.price }}</p>
+      <div *ngIf="hotel.showBookingForm" class="booking-form">
+        <!-- Booking form fields here -->
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <!-- Add more booking form fields as needed -->
+        <button (click)="confirmBooking(hotel)">Confirm Booking</button>
+  </div>
+</div>
+
+
