@@ -1,4 +1,4 @@
-.container {
+/* .container {
     max-width: 20em;
     margin: 0 auto;
     padding: 20px;
@@ -9,20 +9,20 @@
   }
   
   .input-container input {
-    /* width: 10%; */
+    width: 10%;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #5756e6; /* Border color */
+    border: 2px solid #5756e6; Border color
     border-radius: 5px;
     outline: none;
-    transition: border-color 0.3s; /* Smooth transition */
+    transition: border-color 0.3s; Smooth transition
   }
   
   .input-container input:focus {
-    border-color: #f7bf88; /* Border color on focus */
+    border-color: #f7bf88; Border color on focus
   }
   
-  /* Styling for hotel list */
+  Styling for hotel list
   .container div {
     margin-bottom: 20px;
     padding: 10px;
@@ -39,18 +39,23 @@
     color: #777;
   }
 
+  .container div img {
+    width: 100%; Ensure the image fills the container
+    border-radius: 5px; Add border radius if needed
+  }  
+
   .btn-book {
     padding: 8px 16px;
-    background-color: #5756e6; /* Button background color */
-    color: white; /* Button text color */
+    background-color: #5756e6; Button background color
+    color: white; Button text color
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s; Smooth transition
   }
   
   .btn-book:hover {
-    background-color: #8f9cd4; /* Button background color on hover */
+    background-color: #8f9cd4; Button background color on hover
   }
   
 
@@ -77,4 +82,131 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+  } */
+
+.container {
+  max-width: 80%;
+  /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container input {
+  width: 50%;
+  /* Adjust width as needed */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #5756e6;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #f7bf88;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Adjust the number of columns as needed */
+  grid-gap: 20px;
+  /* Adjust the gap between cards */
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  /* border: 5px solid #5756e6;
+  background-color: #f7bf88; */
+  width: 150px;
+  /* Set the width */
+  height: 150px;
+  /* Set the height */
+}
+
+.card img {
+    width: 20px;
+    height: 20px; /* Ensures the image maintains its aspect ratio */
+    border-radius: 5px; /* Add border radius if needed */
+
+}
+
+.card h3,
+.card p {
+  margin: 5px 0;
+}
+
+.hotel-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 3px solid #5756e6; /* Add border here */
+  
+}
+
+.btn-book {
+  padding: 8px 16px;
+  background-color: #5756e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-book:hover {
+  background-color: #8f9cd4;
+}
+
+.booking-form {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border-color: #f7bf88;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  padding: 8px 16px;
+  background-color: #f7bf88;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.rating {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stars {
+  font-size: 24px;
+  color: #f8b739; /* Adjust star color as needed */
+}

@@ -1,8 +1,13 @@
 {
     "hotels": [
-      { "id": 1, "name": "Hotel A", "city": "City 1", "area": "Area A", "price": "$100" },
-      { "id": 2, "name": "Hotel B", "city": "City 2", "area": "Area B", "price": "$120" },
-      { "id": 3, "name": "Hotel C", "city": "City 3", "area": "Area C", "price": "$150" }
+      { "id": 1, "name": "Hotel Alpha", "city": "New York", "area": "Manhattan", "price": "$150 per night" },
+      { "id": 2, "name": "Hotel Beta", "city": "London", "area": "Westminster", "price": "$180 per night" },
+      { "id": 3, "name": "Hotel Gamma", "city": "Paris", "area": "Le Marais", "price": "$200 per night" },
+      { "id": 4, "name": "Hotel Delta", "city": "Tokyo", "area": "Shinjuku", "price": "$160 per night" },
+      { "id": 5, "name": "Hotel Epsilon", "city": "Dubai", "area": "Downtown Dubai", "price": "$$220 per night" },
+      { "id": 6, "name": "Hotel Zeta", "city": "Sydney", "area": "Central Business District", "price": "$190 per night" },
+      { "id": 7, "name": "Hotel Eta", "city": "Rome", "area": "Trastevere", "price": "$170 per night" },
+      { "id": 8, "name": "Hotel Theta", "city": "Barcelona", "area": "Barri Gòtic", "price": "$210 per night" }
     ]
   }
   

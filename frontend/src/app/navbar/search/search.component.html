@@ -19,24 +19,55 @@
 <br>
 <br>
 <br>
-<div class="container">
+<!-- <div class="container">
   <div class="input-container">
     <label>Search: <input type="text" [(ngModel)]="searchText" (input)="search()"></label>
   </div>
 
   <div *ngFor="let hotel of filteredHotels">
+    <img [src]="hotel.imageUrl" alt="Hotel Image">
     <h3>{{ hotel.name }}</h3>
     <p>City: {{ hotel.city }}</p>
     <p>Area: {{ hotel.area }}</p>
     <button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button>
       <p class="price">{{ hotel.price }}</p>
       <div *ngIf="hotel.showBookingForm" class="booking-form">
-        <!-- Booking form fields here -->
+         Booking form fields here 
         <input type="text" placeholder="Name">
         <input type="text" placeholder="Email">
-        <!-- Add more booking form fields as needed -->
+       
         <button (click)="confirmBooking(hotel)">Confirm Booking</button>
   </div>
+</div> -->
+
+<div class="container">
+  <div class="input-container">
+    <label>Search: <input type="text" [(ngModel)]="searchText" (input)="search()"></label>
+  </div>
+
+  <div class="card-container">
+    <div class="hotel-card" *ngFor="let hotel of filteredHotels">
+      <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7X0QNtEVS7I3lVqaQBSs2uRMlgHcZknBIFco9Sj2IZyTAP3Hd9p92mGPFhKROD6md5yA&usqp=CAU'" alt="Hotel Image">
+      <div class="card-details">
+        <h3>{{ hotel.name }}</h3>
+        <p>City: {{ hotel.city }}</p>
+        <p>Area: {{ hotel.area }}</p>
+        <div class="ratings">
+          <span class="rating">{{ hotel.rating }}</span>
+          <span class="stars">★★★★☆</span>
+        </div>
+        <button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button>
+        <p class="price">{{ hotel.price }}</p>
+        <div *ngIf="hotel.showBookingForm" class="booking-form">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Email">
+          <button (click)="confirmBooking(hotel)">Confirm Booking</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
+
 
 

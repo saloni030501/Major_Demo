@@ -49,6 +49,10 @@ export class SearchComponent implements OnInit {
   fetchHotels(): void {
     this.servicesService.getHotels().subscribe(data => {
       this.hotels = data; // Assign fetched data to hotels array
+      // Generate random ratings for each hotel
+      this.hotels.forEach(hotel => {
+        hotel.rating = this.generateRandomRating();
+      });
     });
   }
 
@@ -64,6 +68,11 @@ export class SearchComponent implements OnInit {
       hotel.area.toLowerCase().includes(this.searchText.toLowerCase())
     );
   }
+
+    // Method to generate a random rating between 3.0 and 5.0
+    generateRandomRating(): number {
+      return Math.floor(Math.random() * (5 - 3.0 + 1)) + 3.0;
+    }
 
   selectHotel(hotel: any) {
     // Handle hotel selection, e.g., navigate to booking page
