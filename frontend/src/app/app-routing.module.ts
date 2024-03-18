@@ -7,10 +7,12 @@ import { ContactsComponent } from './navbar/contacts/contacts.component';
 import { SearchComponent } from './navbar/search/search.component';
 import { LoginComponent } from './navbar/login/login.component';
 import { RegisterComponent } from './navbar/register/register.component';
+import { authGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full' },
-  {path: 'home', component:HomeComponent},
+  {path: 'home', component:HomeComponent, canActivate: [authGuard]},
 {path:'about-us',component:AboutUsComponent},
 {path:'book-hotel',component:BookHotelComponent},
 {path: 'contacts', component: ContactsComponent},
