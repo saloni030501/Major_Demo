@@ -8,6 +8,92 @@
       { "id": 6, "name": "Hotel Zeta", "city": "Sydney", "area": "Central Business District", "price": "$190 per night" },
       { "id": 7, "name": "Hotel Eta", "city": "Rome", "area": "Trastevere", "price": "$170 per night" },
       { "id": 8, "name": "Hotel Theta", "city": "Barcelona", "area": "Barri Gòtic", "price": "$210 per night" }
+    ],
+  
+    "users": [
+      {
+        "fullName": "test user",
+        "email": "test1@gmail.com",
+        "password": "1234",
+        "id": "1"
+      },
+      {
+        "fullName": "test Data",
+        "email": "test@gmail.com",
+        "password": "1234",
+        "id": "2"
+      },
+      {
+        "id": "9075",
+        "fullName": "sarthak wagh",
+        "email": "sarthak@info.com",
+        "password": "Sarthak@123"
+      },
+      {
+        "id": "9ebb",
+        "fullName": "gagan baghel",
+        "email": "gagan@gmail.com",
+        "password": "123456"
+      },
+      {
+        "id": "1e51",
+        "fullName": "Parth Raundal",
+        "email": "parthr@cybage.com",
+        "password": "Parth@101"
+      },
+      {
+        "id": "497d",
+        "fullName": "Suyog mankar",
+        "email": "suyog@gmail.com",
+        "password": "Suyog@123"
+      },
+      {
+        "id": "dd33",
+        "fullName": "a",
+        "email": "a@gmail.com",
+        "password": "A",
+        "hasPanCard": ""
+      },
+      {
+        "id": "726e",
+        "fullName": "b",
+        "email": "b@gmail.com",
+        "password": "abc",
+        "hasPanCard": "yes"
+      },
+      {
+        "id": "b60b",
+        "fullName": "c",
+        "email": "c@gmail.com",
+        "password": "1234",
+        "hasPanCard": "yes"
+      },
+      {
+        "id": "fe16",
+        "fullName": "shreya",
+        "email": "s@gmail.com",
+        "password": "1234",
+        "hasPanCard": "yes"
+      },
+      {
+        "id": "0fa2",
+        "fullName": "da",
+        "email": "da@gmail.com",
+        "password": "da",
+        "hasPanCard": "yes"
+      },
+      {
+        "id": "eb1b",
+        "fullName": "foo",
+        "email": "foo@gmail.com",
+        "password": "foo"
+      },
+      {
+        "id": "9b1a",
+        "fullName": "dggs",
+        "email": "dsss@gmail.com",
+        "password": "123"
+      }
     ]
   }
   

@@ -2,6 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+// import { ToastModule } from 'primeng/toast';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +21,6 @@ import { LoginComponent } from './navbar/login/login.component';
 import { RegisterComponent } from './navbar/register/register.component';
 import { BookHotelComponent } from './navbar/book-hotel/book-hotel.component';
 import { FooterComponent } from './footer/footer.component';
-
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CardModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    // ToastModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration()
