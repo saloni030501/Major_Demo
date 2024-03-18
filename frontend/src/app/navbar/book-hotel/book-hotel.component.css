@@ -1,0 +1,95 @@
+.container {
+    max-width: 80%;
+    /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust the number of columns as needed */
+    grid-gap: 20px;
+    /* Adjust the gap between cards */
+  }
+  
+  .card {
+    margin: 30px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    /* border: 5px solid #5756e6;
+    background-color: #f7bf88; */
+    width: 150px;
+    /* Set the width */
+    height: 150px;
+    /* Set the height */
+  }
+  
+  .hotel-card img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Adjust maximum width */
+    max-height: 100px; /* Adjust maximum height */
+    border-radius: 5px; /* Add border radius if needed */
+  }
+  
+  .card h3,
+  .card p {
+    margin: 5px 0;
+  }
+  
+  .hotel-card {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      border: 3px solid #5756e6; /* Add border here */
+      width: 250px;
+      height: 24em;
+    
+  }
+  
+  .btn-book {
+    padding: 8px 16px;
+    background-color: #5756e6;
+    color: #f7bf88;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-book:hover {
+    background-color: #f7bf88;
+    color: #5756e6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f7bf88;
+  }
+  
+  .ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .rating {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .stars {
+    font-size: 24px;
+    color: #f8b739;
+  }
+  
+  .stars i {
+    margin-right: 2px; /* Adjust the spacing between stars */
+  }

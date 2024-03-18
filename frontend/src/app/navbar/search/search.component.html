@@ -54,15 +54,19 @@
         <p>Area: {{ hotel.area }}</p>
         <div class="ratings">
           <span class="rating">{{ hotel.rating }}</span>
-          <span class="stars">★★★★☆</span>
+          <span class="stars">
+            <ng-container *ngFor="let star of getStarArray(hotel.rating)">
+              <i class="fas fa-star"></i>
+            </ng-container>
+          </span>
         </div>
-        <button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button>
+        <a href="#"><button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button></a>
         <p class="price">{{ hotel.price }}</p>
-        <div *ngIf="hotel.showBookingForm" class="booking-form">
+        <!-- <div *ngIf="hotel.showBookingForm" class="booking-form">
           <input type="text" placeholder="Name">
           <input type="text" placeholder="Email">
           <button (click)="confirmBooking(hotel)">Confirm Booking</button>
-        </div>
+        </div> -->
       </div>
       
     </div>

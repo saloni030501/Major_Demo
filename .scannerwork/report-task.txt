@@ -1,0 +1,6 @@
+projectKey=28995_RoomRover:master
+serverUrl=http://172.27.12.78:8000
+serverVersion=7.9.6.41879
+dashboardUrl=http://172.27.12.78:8000/dashboard?id=28995_RoomRover%3Amaster
+ceTaskId=AY5QOrbZ02ASefZCyh9d
+ceTaskUrl=http://172.27.12.78:8000/api/ce/task?id=AY5QOrbZ02ASefZCyh9d

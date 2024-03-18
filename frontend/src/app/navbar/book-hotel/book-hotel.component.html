@@ -1,1 +1,30 @@
-<p>book-hotel works!</p>
+<br>
+<br>
+
+
+<div class="card-container">
+    <div class="hotel-card" *ngFor="let hotel of hotels">
+      <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7X0QNtEVS7I3lVqaQBSs2uRMlgHcZknBIFco9Sj2IZyTAP3Hd9p92mGPFhKROD6md5yA&usqp=CAU'" alt="Hotel Image">
+      <div class="card-details">
+        <h3>{{ hotel.name }}</h3>
+        <p>City: {{ hotel.city }}</p>
+        <p>Area: {{ hotel.area }}</p>
+        <div class="ratings">
+          <span class="rating">{{ hotel.rating }}</span>
+          <span class="stars">
+            <ng-container *ngFor="let star of getStarArray(hotel.rating)">
+              <i class="fas fa-star"></i>
+            </ng-container>
+          </span>
+        </div>
+        <a href="#"><button class="btn-book" (click)="toggleBookingForm(hotel)">Book</button></a>
+        <p class="price">{{ hotel.price }}</p>
+        <!-- <div *ngIf="hotel.showBookingForm" class="booking-form">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Email">
+          <button (click)="confirmBooking(hotel)">Confirm Booking</button>
+        </div> -->
+      </div>
+      
+    </div>
+  </div>

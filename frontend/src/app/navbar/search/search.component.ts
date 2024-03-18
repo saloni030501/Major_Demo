@@ -1,30 +1,3 @@
-
-// import { Component } from '@angular/core';
-// import { SearchService } from '../../search.service';
-
-// @Component({
-//   selector: 'app-search',
-//   templateUrl: './search.component.html',
-//   styleUrls: ['./search.component.css']
-// })
-// export class SearchComponent {
-
-//   city: string = '';
-//   area: string = '';
-//   hotelName: string = '';
-//   searchResults: any[] = [];
-
-//   constructor(private searchService: SearchService) {}
-
-//   search() {
-//     this.searchService.searchHotels(this.city, this.area, this.hotelName)
-//       .subscribe((results: any[]) => {
-//         this.searchResults = results;
-//       });
-//   }
-// }
-
-
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../../services/services.service';
 
@@ -74,6 +47,12 @@ export class SearchComponent implements OnInit {
       return Math.floor(Math.random() * (5 - 3.0 + 1)) + 3.0;
     }
 
+    getStarArray(rating: number): number[] {
+      const starsCount = Math.floor(rating);
+      const halfStar = rating % 1 !== 0;
+      return Array.from({ length: starsCount }).map((_, index) => index + 1).concat(halfStar ? [0.5] : []);
+    }
+
   selectHotel(hotel: any) {
     // Handle hotel selection, e.g., navigate to booking page
     console.log('Selected hotel:', hotel);
@@ -84,10 +63,10 @@ export class SearchComponent implements OnInit {
     hotel.showBookingForm = !hotel.showBookingForm;
   }
 
-  confirmBooking(hotel: any) {
-    // Handle booking confirmation
-    console.log('Confirmed booking for hotel:', hotel);
-  }
+  // confirmBooking(hotel: any) {
+  //   // Handle booking confirmation
+  //   console.log('Confirmed booking for hotel:', hotel);
+  // }
 }
 
 
