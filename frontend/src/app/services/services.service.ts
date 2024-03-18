@@ -23,4 +23,14 @@ export class ServicesService {
   getHotels(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/hotels`);
   }
+
+  // Define the writeData method to send data to the backend server
+  writeData(formData: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl, formData);
+  }
+
+  // Define the getBookings method to fetch bookings data from the backend server
+  getBookings(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000'); // Adjust the URL as needed
+  }
 }

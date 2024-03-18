@@ -1,0 +1,56 @@
+<div class="booking-form">
+    <p style="font-family: cursive, sans-serif; font-size: 30px;text-align: center; ">Hotel Booking Form</p>
+    <form [formGroup]="bookingForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name of Customer:</label>
+        <input type="text" id="name" formControlName="name" required>
+        <div *ngIf="bookingForm.get('name')?.invalid && (bookingForm.get('name')?.dirty || bookingForm.get('name')?.touched)">
+          <span class="error">Name is required.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <div *ngIf="bookingForm.get('email')?.invalid && (bookingForm.get('email')?.dirty || bookingForm.get('email')?.touched)">
+          <span class="error">Email is required and must be a valid email address.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" formControlName="contactNumber" required>
+        <div *ngIf="bookingForm.get('contactNumber')?.invalid && (bookingForm.get('contactNumber')?.dirty || bookingForm.get('contactNumber')?.touched)">
+          <span class="error">Contact Number is required.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="arrivalDate">Arrival Date:</label>
+        <input type="date" id="arrivalDate" formControlName="arrivalDate" required>
+        <div *ngIf="bookingForm.get('arrivalDate')?.invalid && (bookingForm.get('arrivalDate')?.dirty || bookingForm.get('arrivalDate')?.touched)">
+          <span class="error">Arrival Date is required.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" formControlName="departureDate" required>
+        <div *ngIf="bookingForm.get('departureDate')?.invalid && (bookingForm.get('departureDate')?.dirty || bookingForm.get('departureDate')?.touched)">
+          <span class="error">Departure Date is required.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="numberOfPeople">Number of People:</label>
+        <input type="number" id="numberOfPeople" formControlName="numberOfPeople" required>
+        <div *ngIf="bookingForm.get('numberOfPeople')?.invalid && (bookingForm.get('numberOfPeople')?.dirty || bookingForm.get('numberOfPeople')?.touched)">
+          <span class="error">Number of People is required.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="numberOfRooms">Number of Rooms Required:</label>
+        <input type="number" id="numberOfRooms" formControlName="numberOfRooms" required>
+        <div *ngIf="bookingForm.get('numberOfRooms')?.invalid && (bookingForm.get('numberOfRooms')?.dirty || bookingForm.get('numberOfRooms')?.touched)">
+          <span class="error">Number of Rooms Required is required.</span>
+        </div>
+      </div>
+      <button type="submit" [disabled]="bookingForm.invalid">Submit</button>
+    </form>
+  </div>
+  

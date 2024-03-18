@@ -8,6 +8,7 @@ import { SearchComponent } from './navbar/search/search.component';
 import { LoginComponent } from './navbar/login/login.component';
 import { RegisterComponent } from './navbar/register/register.component';
 import { authGuard } from './guards/auth.guard';
+import { BookingFormComponent } from './booking-form/booking-form.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent, canActivate: [authGuard]},
 {path:'about-us',component:AboutUsComponent},
 {path:'book-hotel',component:BookHotelComponent},
+{ path: 'booking-form/:hotelId', component: BookingFormComponent },
 {path: 'contacts', component: ContactsComponent},
 {path:'search',component:SearchComponent},
 {path: 'login', component: LoginComponent},

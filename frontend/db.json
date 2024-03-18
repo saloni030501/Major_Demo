@@ -94,6 +94,59 @@
         "email": "dsss@gmail.com",
         "password": "123"
       }
+    ],
+
+    "bookings": [
+      {
+        "id": "1",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "contactNumber": "1234567890",
+        "arrivalDate": "2024-03-20",
+        "departureDate": "2024-03-25",
+        "numberOfPeople": 2,
+        "numberOfRooms": 1
+      },
+      {
+        "id": "2",
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "contactNumber": "9876543210",
+        "arrivalDate": "2024-04-10",
+        "departureDate": "2024-04-15",
+        "numberOfPeople": 3,
+        "numberOfRooms": 2
+      },
+      {
+        "id": "a531",
+        "name": "Parth Raundal",
+        "email": "parthr@cybage.com",
+        "contactNumber": "8208182733",
+        "arrivalDate": "2024-03-21",
+        "departureDate": "2024-03-30",
+        "numberOfPeople": 5,
+        "numberOfRooms": 2
+      },
+      {
+        "id": "0c93",
+        "name": "roshan",
+        "email": "roshan@gmail.com",
+        "contactNumber": "1236547898",
+        "arrivalDate": "2024-03-16",
+        "departureDate": "2024-03-21",
+        "numberOfPeople": 2,
+        "numberOfRooms": 1
+      },
+      {
+        "id": "d3cd",
+        "name": "Saloni Deshmukh",
+        "email": "salonides@gmail.com",
+        "contactNumber": "9876543211",
+        "arrivalDate": "2024-03-11",
+        "departureDate": "2024-03-12",
+        "numberOfPeople": 1,
+        "numberOfRooms": 1
+      }
     ]
   }
   

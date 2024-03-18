@@ -50,7 +50,7 @@
     
   }
   
-  .btn-book {
+  .button-link {
     padding: 8px 16px;
     background-color: #5756e6;
     color: #f7bf88;
@@ -58,16 +58,12 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
   }
   
-  .btn-book:hover {
+  .button-link:hover {
     background-color: #f7bf88;
     color: #5756e6;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #f7bf88;
   }
   
   .ratings {

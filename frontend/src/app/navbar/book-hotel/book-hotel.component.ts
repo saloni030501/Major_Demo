@@ -4,13 +4,14 @@ import { ServicesService } from '../../services/services.service';
 @Component({
   selector: 'app-book-hotel',
   templateUrl: './book-hotel.component.html',
-  styleUrl: './book-hotel.component.css'
+  styleUrl: './book-hotel.component.css',
 })
-export class BookHotelComponent implements OnInit{
-
+export class BookHotelComponent implements OnInit {
   hotels: any[] = [];
 
-  constructor(private servicesService: ServicesService) { }
+  constructor(
+    private servicesService: ServicesService
+  ) {}
 
   ngOnInit(): void {
     // Fetch hotels data when component initializes
@@ -19,11 +20,12 @@ export class BookHotelComponent implements OnInit{
 
   // Method to fetch hotels data from the service
   fetchHotels(): void {
-    this.servicesService.getHotels().subscribe(data => {
+    this.servicesService.getHotels().subscribe((data) => {
       this.hotels = data; // Assign fetched data to hotels array
       // Generate random ratings for each hotel
-      this.hotels.forEach(hotel => {
+      this.hotels.forEach((hotel) => {
         hotel.rating = this.generateRandomRating();
+        hotel.showBookingForm = false; // Initialize the flag to hide the booking form
       });
     });
   }
@@ -36,11 +38,14 @@ export class BookHotelComponent implements OnInit{
   getStarArray(rating: number): number[] {
     const starsCount = Math.floor(rating);
     const halfStar = rating % 1 !== 0;
-    return Array.from({ length: starsCount }).map((_, index) => index + 1).concat(halfStar ? [0.5] : []);
+    return Array.from({ length: starsCount })
+      .map((_, index) => index + 1)
+      .concat(halfStar ? [0.5] : []);
   }
 
-  toggleBookingForm(hotel: any) {
-    // Toggle booking form visibility
+  toggleBookingForm(hotel: any): void {
+    // Toggle booking form visibility for the selected hotel
     hotel.showBookingForm = !hotel.showBookingForm;
   }
+ 
 }
