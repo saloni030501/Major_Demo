@@ -21,6 +21,7 @@ import { LoginComponent } from './navbar/login/login.component';
 import { RegisterComponent } from './navbar/register/register.component';
 import { BookHotelComponent } from './navbar/book-hotel/book-hotel.component';
 import { FooterComponent } from './footer/footer.component';
+import { BookingFormComponent } from './booking-form/booking-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     RegisterComponent,
     BookHotelComponent,
-    FooterComponent
+    FooterComponent,
+    BookingFormComponent
     
   ],
   imports: [
