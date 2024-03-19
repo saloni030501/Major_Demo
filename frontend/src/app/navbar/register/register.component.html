@@ -1,5 +1,8 @@
+<body class="background-image">
+
+<div class="container">
 <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
-    <p-card header="Register" [style]="{ width: '360px' }">
+    <p-card  [style]="{ width: '360px' }">
       <div class="field">
         <label for="fullName">FullName</label>
         <input
@@ -83,22 +86,25 @@
       </div>
       <!-- pancard -->
       <div class="field">
-        <label for="pancard">PAN Card</label><br>
-        <input type="radio" id="Yes" name="hasPanCard" formControlName="hasPanCard" value="yes">
-        <label for="Yes">Yes</label><br>
-        <input type="radio" id="No" name="hasPanCard" formControlName="hasPanCard" value="no">
-        <label for="No">No</label><br>
+        <label for="pancard">PAN Card</label>
+        <div class="radio-buttons">
+          <input type="radio" id="yes" name="hasPanCard" formControlName="hasPanCard" value="yes">
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="hasPanCard" formControlName="hasPanCard" value="no">
+          <label for="no">No</label>
+        </div>
       </div>
+      
       
         
      
-      <p-button
-        label="Register"
-        styleClass="w-full"
-        [disabled]="registerForm.invalid"
-        type="submit"
-      ></p-button>
-      <div class="mt-2">Already a member? <a routerLink="/login">Login</a></div>
+      <div class="button-container">
+        <button pButton type="submit" label="Register" class="register-button"></button>
+        <button pButton type="submit" label="Login" class="login-button" (click)="redirectToLogin()"></button>
+      </div>
+      
     </p-card>
   </form>
+</div>
+</body>
   

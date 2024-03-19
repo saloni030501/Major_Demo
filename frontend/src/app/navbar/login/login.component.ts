@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServicesService } from '../../services/services.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -32,14 +33,43 @@ export class LoginComponent {
       response => {
         if (response.length > 0 && response[0].password === password) {
           sessionStorage.setItem('email', email as string);
-          this.router.navigate(['/home']);
+
+          // Display success notification upon successful login
+          Swal.fire({
+            icon: 'success',
+            title: 'Login Successful',
+            text: 'Welcome back!',
+            confirmButtonText: 'Continue'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // Redirect to home page after clicking "Continue"
+              this.router.navigate(['/home']);
+            }
+          });
         } else {
-          this.errorMessage = 'Email or password is wrong';
+          // Display error notification if email or password is wrong
+          Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: 'Email or password is wrong',
+            confirmButtonText: 'OK'
+          });
         }
       },
       error => {
-        this.errorMessage = 'Something went wrong';
+        // Display error notification if something goes wrong
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+          confirmButtonText: 'OK'
+        });
       }
     );
   }
+
+  redirectToRegister() {
+    this.router.navigate(['/register']);
+  }
+
   }

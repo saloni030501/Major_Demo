@@ -1,0 +1,95 @@
+/* CSS */
+
+body.background-image {
+    background: rgba(255, 255, 255, 0.7) url('https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure the form is positioned relative to its container */
+    /* z-index: 1; Adjust the value as needed */
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.login-form:hover {
+    transform: scale(1.05); /* Increase size on hover */
+}
+
+.form-container {
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add background color with transparency */
+}
+
+.field {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+small {
+    color: red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in-button,
+.register-button {
+    width: calc(50% - 5px); /* Adjust the spacing between buttons by changing the value */
+    display: inline-block; /* Set buttons to display inline */
+}
+
+.sign-in-button {
+    background-color: #f7bf88;
+    color: #5756e6;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+    background-color: #0056b3;
+    color: #f7bf88;
+    transform: translateY(-2px);
+}
+
+.register-button {
+    background-color: #f7bf88;
+    color: #5756e6;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Change background color for register button */
+}
+
+.register-button:hover {
+    background-color: #5756e6;
+    color: #f7bf88;
+}

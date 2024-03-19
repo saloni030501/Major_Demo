@@ -25,6 +25,7 @@ export class BookHotelComponent implements OnInit {
       // Generate random ratings for each hotel
       this.hotels.forEach((hotel) => {
         hotel.rating = this.generateRandomRating();
+        hotel.roomsAvailable = this.generateRandomRooms();
         hotel.showBookingForm = false; // Initialize the flag to hide the booking form
       });
     });
@@ -34,6 +35,11 @@ export class BookHotelComponent implements OnInit {
   generateRandomRating(): number {
     return Math.floor(Math.random() * (5 - 3.0 + 1)) + 3.0;
   }
+
+    // Method to generate a random number of available rooms between 5 and 20
+    generateRandomRooms(): number {
+      return Math.floor(Math.random() * (20 - 5 + 1)) + 5;
+    }
 
   getStarArray(rating: number): number[] {
     const starsCount = Math.floor(rating);

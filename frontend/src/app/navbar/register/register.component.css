@@ -1,0 +1,96 @@
+/* Body Background */
+body.background-image {
+    background: rgba(255, 255, 255, 0.7) url('https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Optional: Ensure the container takes up the full height of the viewport */
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure the form is positioned relative to its container */
+    /* z-index: 1; Adjust the value as needed */
+    transition: transform 0.3s ease;
+}
+
+.registration-form:hover {
+    transform: scale(1.05); /* Increase size on hover */
+}
+
+/* Registration Card */
+.registration-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.field {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Radio Buttons */
+.radio-buttons {
+    display: flex;
+}
+
+.radio-buttons input[type="radio"] {
+    margin-right: 5px; /* Adjust spacing between radio buttons */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+}
+
+.register-button,
+.login-button {
+    width: calc(50% - 5px); /* Adjust the width of buttons */
+    margin-right: 5px; /* Adjust spacing between buttons */
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    background-color: #f7bf88;
+    color: #5756e6;
+}
+
+.register-button:hover,
+.login-button:hover {
+    background-color: #5756e6;
+    color: #f7bf88;
+    transform: translateY(-2px);
+}
