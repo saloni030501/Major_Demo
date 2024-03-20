@@ -33,4 +33,14 @@ export class ServicesService {
   getBookings(): Observable<any> {
     return this.http.get<any>('http://localhost:3000'); // Adjust the URL as needed
   }
+  
+  // Delete booking component
+  getBookings(): Observable<Booking[]> {
+    return this.http.get<Booking[]>(this.apiUrl);
+  }
+
+  softDeleteBooking(id: number): Observable<void> {
+    // Send a PATCH request to update the 'deleted' flag to true
+    return this.http.patch<void>(`${this.apiUrl}/${id}`, { deleted: true });
+  }
 }
