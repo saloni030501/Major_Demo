@@ -22,6 +22,7 @@ import { RegisterComponent } from './navbar/register/register.component';
 import { BookHotelComponent } from './navbar/book-hotel/book-hotel.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookingFormComponent } from './booking-form/booking-form.component';
+import { BookingListComponent } from './booking-list/booking-list.component'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BookingFormComponent } from './booking-form/booking-form.component';
     RegisterComponent,
     BookHotelComponent,
     FooterComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    BookingListComponent
     
   ],
   imports: [
