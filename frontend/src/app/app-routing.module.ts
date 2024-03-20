@@ -9,6 +9,7 @@ import { LoginComponent } from './navbar/login/login.component';
 import { RegisterComponent } from './navbar/register/register.component';
 import { authGuard } from './guards/auth.guard';
 import { BookingFormComponent } from './booking-form/booking-form.component';
+import { BookingListComponent } from './booking-list/booking-list.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
 {path:'about-us',component:AboutUsComponent},
 {path:'book-hotel',component:BookHotelComponent},
 { path: 'booking-form/:hotelId', component: BookingFormComponent },
+{ path: 'booking-list', component: BookingListComponent },
 {path: 'contacts', component: ContactsComponent},
 {path:'search',component:SearchComponent},
 {path: 'login', component: LoginComponent},
